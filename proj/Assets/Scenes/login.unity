@@ -477,7 +477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 42, y: 832}
+  m_AnchoredPosition: {x: 42, y: 1146}
   m_SizeDelta: {x: 526.5341, y: 266.5995}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &481550994
@@ -1419,6 +1419,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TextMeshPro - InputField- schoolName
       objectReference: {fileID: 0}
+    - target: {fileID: 3433835155557414778, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3433835155557414783, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -1775,6 +1779,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1404080890}
     m_Modifications:
+    - target: {fileID: 3433835154697876413, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_text
+      value: "\uFEE3\uFE98\uFEE6 \uFEAD\uFE8D \uFEED\uFE8D\uFEAD\uFEA9 \uFB90\uFEE8\uFBFF\uFEAA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433835154697876413, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.81568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433835154697876413, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.81568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433835154697876413, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.8235295
+      objectReference: {fileID: 0}
+    - target: {fileID: 3433835154697876413, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4291875026
+      objectReference: {fileID: 0}
     - target: {fileID: 3433835155557414776, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
       propertyPath: m_OnEndEdit.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1849,7 +1873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3433835155557414777, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 7.4529
+      value: -0.0000061989
       objectReference: {fileID: 0}
     - target: {fileID: 3433835155557414777, guid: 62e7d9e4822025f45a65574f6e304cc2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
