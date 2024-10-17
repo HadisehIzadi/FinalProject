@@ -250,6 +250,12 @@ public class LevelSelection : MonoBehaviour
     {
     	SceneManager.LoadScene("login");
     }
+    public void GreenButton()
+    {
+        SceneManager.LoadScene(PlayerPrefs.GetInt("level", 1));
+        
+        
+    }
     
     
     void SetStars()
