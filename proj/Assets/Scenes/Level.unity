@@ -1044,7 +1044,7 @@ PrefabInstance:
       objectReference: {fileID: 776367290}
     - target: {fileID: 2785787002428879268, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: HomeButtonLevelSelection
+      value: exitLevel
       objectReference: {fileID: 0}
     - target: {fileID: 2785787002428879268, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
@@ -1121,6 +1121,14 @@ PrefabInstance:
     - target: {fileID: 3144013354410830673, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 776367290}
+    - target: {fileID: 3144013354410830673, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ContinueLavel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3144013354410830673, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelBase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3455036475319623715, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1181,6 +1189,14 @@ PrefabInstance:
     - target: {fileID: 4024764612477971544, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 776367290}
+    - target: {fileID: 4024764612477971544, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HomeButtonLevelSelection
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024764612477971544, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LevelBase, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4261613057169675933, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_IsActive
