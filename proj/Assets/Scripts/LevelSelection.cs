@@ -314,10 +314,14 @@ public class LevelSelection : MonoBehaviour
     
     	for(int i = 1 ; i <PlayerPrefs.GetInt("level" , 1);i++)
     	{
-    		levels[i].gameObject.GetComponent<Image>().sprite = levelBack;
-    	    levels[i].transform.GetChild(0).gameObject.SetActive(true);
-    	    levels[i].transform.GetChild(2).gameObject.SetActive(true);
-    	    canGoLevel[i] = true;
+            // baraye roidad mantaghe 
+            if (i != 3)
+            {
+                levels[i].gameObject.GetComponent<Image>().sprite = levelBack;
+                levels[i].transform.GetChild(0).gameObject.SetActive(true);
+                levels[i].transform.GetChild(2).gameObject.SetActive(true);
+                canGoLevel[i] = true;
+            }
     	}
     }
     

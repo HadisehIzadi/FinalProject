@@ -394,7 +394,7 @@ public class Level3: MonoBehaviour
     			videoPlayers[i].SetActive(false);
     	}
     	if(PlayerPrefs.GetInt("sound", 1) == 1){
-    	if(PlayerPrefs.GetInt("level3tars") >= 2){
+    	if(PlayerPrefs.GetInt("level3stars") >= 2){
     			gameAudio.Stop();
     			audioSource[1].Play();
     		}
@@ -420,8 +420,8 @@ public class Level3: MonoBehaviour
     	 Debug.Log(overallScore);
     	 
     	 if(overallScore >= 80f){
-    		PlayerPrefs.SetInt("level2Stars" ,4 );
-    		PlayerPrefs.SetInt("hearts" ,4 );
+    		PlayerPrefs.SetInt("level3Stars" ,3 );
+    		PlayerPrefs.SetInt("hearts" ,3 );
     		
     		if((PlayerPrefs.GetInt("level")) < 4)
     			PlayerPrefs.SetInt("level" , 4);
@@ -430,7 +430,7 @@ public class Level3: MonoBehaviour
     	 else if(overallScore < 80f && overallScore >= 60f){
     		PlayerPrefs.SetInt("level3Stars" ,2 );
     		if((PlayerPrefs.GetInt("level")) < 3)
-    			PlayerPrefs.SetInt("level" , 3);
+    			PlayerPrefs.SetInt("level" , 4);
     	 }
     	 
     	else if (overallScore < 60f && overallScore >= 20f)
