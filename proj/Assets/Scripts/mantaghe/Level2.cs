@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
 
-public class LevelBase: MonoBehaviour
+public class Level2: MonoBehaviour
 {
 	[Header ("animations")]
 	[SerializeField] public GameObject[] videoPlayers;
@@ -134,25 +134,12 @@ public class LevelBase: MonoBehaviour
 	[Header("qestion 5 / button 3")]
 	[SerializeField] Button q5b3;
 
-	
-	//************************************************
-    //			q6
-    //**************************************************	
-	[Header("qestion 6 / button 1")]
-	[SerializeField] Button q6b1;
-	[SerializeField] ParticleSystem particle6;
 
-	
-	[Header("qestion 6 / button 2")]
-	[SerializeField] Button q6b2;
-
-	[Header("qestion 6 / button 3")]
-	[SerializeField] Button q6b3;
 
 	
 	
 	
-	public static LevelBase instance;
+	public static Level2 instance;
 	bool isStarted = false;
 	void Awake()
 	{
@@ -172,11 +159,11 @@ public class LevelBase: MonoBehaviour
 
     void Start()
     {
-    	ShowHint1();
+    	//ShowHint1();
 
 
     	
-    //	StartGame();
+    	StartGame();
 
     	
     }
