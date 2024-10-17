@@ -309,6 +309,61 @@ public class LevelBase: MonoBehaviour
 		disableButtons(q2b1, q2b2, q2b3);
 		StartCoroutine("LoadQestion3");
 	}
+	
+	
+	//************************************************
+    //			q3
+    //**************************************************
+    
+	public void Q3B1()
+	{
+		CorrectAnswere(q3b1);
+		particle3.Play();
+		targets[2].SetActive(false);
+		disableButtons(q3b1, q3b2, q3b3);
+		StartCoroutine("LoadQestion4");
+	}
+    
+	public void Q3B2()
+	{
+		FalseAnswere(q3b2, q3b1);
+		disableButtons(q3b1, q3b2, q3b3);
+		StartCoroutine("LoadQestion4");
+	}
+    
+	public void Q3B3()
+	{
+		FalseAnswere(q3b3, q3b1);
+		disableButtons(q3b1, q3b2, q3b3);
+		StartCoroutine("LoadQestion4");
+	}
+	
+	//************************************************
+    //			q4
+    //**************************************************
+    
+	public void Q4B1()
+	{
+		CorrectAnswere(q4b1);
+		particle4.Play();
+		targets[3].SetActive(false);
+		disableButtons(q4b1, q4b2, q4b3);
+		StartCoroutine("LoadQestion5");
+	}
+    
+	public void Q4B2()
+	{
+		FalseAnswere(q4b2, q4b1);
+		disableButtons(q4b1, q4b2, q4b3);
+		StartCoroutine("LoadQestion5");;
+	}
+    
+	public void Q4B3()
+	{
+		FalseAnswere(q4b3, q4b1);
+		disableButtons(q4b1, q4b2, q4b3);
+		StartCoroutine("LoadQestion5");
+	}
     
   
 
