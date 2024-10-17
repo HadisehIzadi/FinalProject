@@ -393,8 +393,10 @@ public class Level3: MonoBehaviour
     		else
     			videoPlayers[i].SetActive(false);
     	}
+        Debug.Log("level starts : " + PlayerPrefs.GetInt("level3Stars"));
     	if(PlayerPrefs.GetInt("sound", 1) == 1){
-    	if(PlayerPrefs.GetInt("level3stars") >= 2){
+            if (PlayerPrefs.GetInt("level3Stars") >= 2){
+                
     			gameAudio.Stop();
     			audioSource[1].Play();
     		}
