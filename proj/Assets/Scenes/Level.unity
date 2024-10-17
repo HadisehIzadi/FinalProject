@@ -974,6 +974,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -745
       objectReference: {fileID: 0}
+    - target: {fileID: 2343409323355479890, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 671b7e824ac7cc24f884eef63afd9ca5, type: 3}
     - target: {fileID: 2785787002428879268, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -1042,6 +1046,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 776367287}
+    - target: {fileID: 4762192487512687437, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 671b7e824ac7cc24f884eef63afd9ca5, type: 3}
     - target: {fileID: 4793442989185522847, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1222,6 +1230,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 5833210568328286309, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 671b7e824ac7cc24f884eef63afd9ca5, type: 3}
     - target: {fileID: 5961383306351211816, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_Camera
       value: 
@@ -1274,6 +1286,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 776367287}
+    - target: {fileID: 6291996543630965264, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 671b7e824ac7cc24f884eef63afd9ca5, type: 3}
     - target: {fileID: 6378396654273372353, guid: f7807810ef8c34b4a8bdc6b99632540c, type: 3}
       propertyPath: m_Sprite
       value: 
