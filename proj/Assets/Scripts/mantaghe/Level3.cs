@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Video;
 
-public class Level2: MonoBehaviour
+public class Level3: MonoBehaviour
 {
 	[Header ("animations")]
 	[SerializeField] public GameObject[] videoPlayers;
@@ -19,10 +19,8 @@ public class Level2: MonoBehaviour
 	[SerializeField] GameObject mainCanvas;
 	[SerializeField] GameObject nextlvelcanvas;
 	[SerializeField] GameObject ExitPanel;
-	[SerializeField] GameObject Hint1;
-	[SerializeField] GameObject Hint2;
-	[SerializeField] GameObject Hint3;
-	[SerializeField] GameObject Hint4;
+    [SerializeField] GameObject endGamePanel;
+
 	[SerializeField] Sprite man;
 	[SerializeField] Sprite woman;
 	[SerializeField] GameObject loginButton;
@@ -31,8 +29,7 @@ public class Level2: MonoBehaviour
 	[SerializeField] GameObject q2;
 	[SerializeField] GameObject q3;
 	[SerializeField] GameObject q4;
-	[SerializeField] GameObject q5;
-	[SerializeField] GameObject q6;
+	
 	[Header ("elemets")]
 	[SerializeField] public int level1hearts;
 	[SerializeField] GameObject[] hearts;
@@ -119,27 +116,14 @@ public class Level2: MonoBehaviour
 	[Header("qestion 4 / button 3")]
 	[SerializeField] Button q4b3;
 
-	//************************************************
-    //			q5
-    //**************************************************	
-	[Header("qestion 5 / button 1")]
-	[SerializeField] Button q5b1;
-	[SerializeField] ParticleSystem particle5;
-
 	
-	[Header("qestion 5 / button 2")]
-	[SerializeField] Button q5b2;
-
-
-	[Header("qestion 5 / button 3")]
-	[SerializeField] Button q5b3;
 
 
 
 	
 	
 	
-	public static Level2 instance;
+	public static Level3 instance;
 	bool isStarted = false;
 	void Awake()
 	{
@@ -177,8 +161,7 @@ public class Level2: MonoBehaviour
     	q2.SetActive(false);
     	q3.SetActive(false);
     	q4.SetActive(false);
-    	q5.SetActive(false);
-    	q6.SetActive(false);
+    	
     	
     	nextlvelcanvas.SetActive(false);
     	level1hearts = PlayerPrefs.GetInt("hearts" ,3 );
@@ -397,23 +380,21 @@ public class Level2: MonoBehaviour
     	q2.SetActive(false);
     	q3.SetActive(false);
     	q4.SetActive(false);
-    	q5.SetActive(false);
     	
-    	q6.SetActive(false);
     	mainCanvas.SetActive(false);
     	
     	SetScore();
-    	videoPlayers[PlayerPrefs.GetInt("level2Stars")].SetActive(true);
-    	Debug.Log(PlayerPrefs.GetInt("level2Stars"));
+    	videoPlayers[PlayerPrefs.GetInt("level3Stars")].SetActive(true);
+    	Debug.Log(PlayerPrefs.GetInt("level3Stars"));
     	for(int i = 0 ; i < videoPlayers.Length;i++)
     	{
-    		if(i == PlayerPrefs.GetInt("level2Stars"))
-    			videoPlayers[PlayerPrefs.GetInt("level2Stars")].GetComponent<VideoPlayer>().Play();
+    		if(i == PlayerPrefs.GetInt("level3Stars"))
+    			videoPlayers[PlayerPrefs.GetInt("level3Stars")].GetComponent<VideoPlayer>().Play();
     		else
     			videoPlayers[i].SetActive(false);
     	}
     	if(PlayerPrefs.GetInt("sound", 1) == 1){
-    	if(PlayerPrefs.GetInt("level2Stars") >= 2){
+    	if(PlayerPrefs.GetInt("level3tars") >= 2){
     			gameAudio.Stop();
     			audioSource[1].Play();
     		}
@@ -439,28 +420,28 @@ public class Level2: MonoBehaviour
     	 Debug.Log(overallScore);
     	 
     	 if(overallScore >= 80f){
-    		PlayerPrefs.SetInt("level2Stars" ,3 );
-    		PlayerPrefs.SetInt("hearts" ,3 );
+    		PlayerPrefs.SetInt("level2Stars" ,4 );
+    		PlayerPrefs.SetInt("hearts" ,4 );
     		
-    		if((PlayerPrefs.GetInt("level")) < 3)
-    			PlayerPrefs.SetInt("level" , 3);
+    		if((PlayerPrefs.GetInt("level")) < 4)
+    			PlayerPrefs.SetInt("level" , 4);
     		Debug.Log("level :" +PlayerPrefs.GetInt("level" , 1));
     	 }
     	 else if(overallScore < 80f && overallScore >= 60f){
-    		PlayerPrefs.SetInt("level2Stars" ,2 );
+    		PlayerPrefs.SetInt("level3Stars" ,2 );
     		if((PlayerPrefs.GetInt("level")) < 3)
     			PlayerPrefs.SetInt("level" , 3);
     	 }
     	 
     	else if (overallScore < 60f && overallScore >= 20f)
-    		PlayerPrefs.SetInt("level2Stars" ,1 );
+    		PlayerPrefs.SetInt("level3Stars" ,1 );
     	else
-    		PlayerPrefs.SetInt("level2Stars" ,0 );
+    		PlayerPrefs.SetInt("level3Stars" ,0 );
     	
 
     	
-    	if( PlayerPrefs.GetInt("level2Stars") > PlayerPrefs.GetInt("Maxlevel2Stars" , 0))
-    	 	PlayerPrefs.SetInt("Maxlevel2Stars" , PlayerPrefs.GetInt("level2Stars"));
+    	if( PlayerPrefs.GetInt("level3Stars") > PlayerPrefs.GetInt("Maxlevel3Stars" , 0))
+    	 	PlayerPrefs.SetInt("Maxlevel3Stars" , PlayerPrefs.GetInt("level3Stars"));
     }
 
     
@@ -494,23 +475,23 @@ public class Level2: MonoBehaviour
     	if(!GameEnd){
     	yield return new WaitForSeconds(2.5f);
     	q4.SetActive(false);
-    	q5.SetActive(true);}
+    	}
     }
     
     IEnumerator LoadQestion6()
     {
     	if(!GameEnd){
     	yield return new WaitForSeconds(2.5f);
-    	q5.SetActive(false);
-    	q6.SetActive(true);}
+    	}
     }
     
     IEnumerator GoNextLevel()
     {
     	yield return new WaitForSeconds(7.5f);
-    	nextlvelcanvas.SetActive(true);
-    	videoPlayers[PlayerPrefs.GetInt("level2Stars")].GetComponent<VideoPlayer>().Pause();
-    	videoPlayers[PlayerPrefs.GetInt("level2Stars")].SetActive(false);
+        //nextlvelcanvas.SetActive(true);
+        endGamePanel.SetActive(true);
+    	videoPlayers[PlayerPrefs.GetInt("level3Stars")].GetComponent<VideoPlayer>().Pause();
+    	videoPlayers[PlayerPrefs.GetInt("level3Stars")].SetActive(false);
     	videoPlayers[4].SetActive(true);
     	videoPlayers[4].GetComponent<VideoPlayer>().Prepare();
 
@@ -523,7 +504,7 @@ public class Level2: MonoBehaviour
     	Debug.Log("playing video 4");
     	videoPlayers[4].GetComponent<VideoPlayer>().Play();
     
-    	StartCoroutine(LoadScene("Level3" , 5.5f));
+    	StartCoroutine(LoadScene("Level4" , 5.5f));
     	}
     	else{
     		if(PlayerPrefs.GetInt("Vibrate", 1) == 1)
@@ -572,31 +553,7 @@ public class Level2: MonoBehaviour
     }
     
     
-    void ShowHint1()
-    {
-    	Hint1.SetActive(true);
-    }
-    public void ContineHint1()
-    {
-    	Hint1.SetActive(false);
-    	Hint2.SetActive(true);
-    }
-    public void ContineHint2()
-    {
-    	Hint2.SetActive(false);
-    	Hint3.SetActive(true);
-    }
-    public void ContineHint3()
-    {
-    	Hint3.SetActive(false);
-    	Hint4.SetActive(true);
-    }
-   public void ContineHint4()
-    {
-    	Hint4.SetActive(false);
-    	StartGame();
-    	
-    }
+   
    void SetLoginSprite()
     {
     	if(PlayerPrefs.GetInt("Sex", 0) == 0 )

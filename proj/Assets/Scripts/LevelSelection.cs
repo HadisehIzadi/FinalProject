@@ -252,7 +252,9 @@ public class LevelSelection : MonoBehaviour
     }
     public void GreenButton()
     {
-        SceneManager.LoadScene(PlayerPrefs.GetInt("level", 1));
+        
+       if(PlayerPrefs.GetInt("level") != 4)
+            SceneManager.LoadScene(PlayerPrefs.GetInt("level", 1));
         
         
     }
