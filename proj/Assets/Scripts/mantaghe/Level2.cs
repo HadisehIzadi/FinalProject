@@ -403,17 +403,17 @@ public class Level2: MonoBehaviour
     	mainCanvas.SetActive(false);
     	
     	SetScore();
-    	videoPlayers[PlayerPrefs.GetInt("level1Stars")].SetActive(true);
-    	Debug.Log(PlayerPrefs.GetInt("level1Stars"));
+    	videoPlayers[PlayerPrefs.GetInt("level2Stars")].SetActive(true);
+    	Debug.Log(PlayerPrefs.GetInt("level2Stars"));
     	for(int i = 0 ; i < videoPlayers.Length;i++)
     	{
-    		if(i == PlayerPrefs.GetInt("level1Stars"))
-    			videoPlayers[PlayerPrefs.GetInt("level1Stars")].GetComponent<VideoPlayer>().Play();
+    		if(i == PlayerPrefs.GetInt("level2Stars"))
+    			videoPlayers[PlayerPrefs.GetInt("level2Stars")].GetComponent<VideoPlayer>().Play();
     		else
     			videoPlayers[i].SetActive(false);
     	}
     	if(PlayerPrefs.GetInt("sound", 1) == 1){
-    	if(PlayerPrefs.GetInt("level1Stars") >= 2){
+    	if(PlayerPrefs.GetInt("level2Stars") >= 2){
     			gameAudio.Stop();
     			audioSource[1].Play();
     		}
@@ -439,28 +439,28 @@ public class Level2: MonoBehaviour
     	 Debug.Log(overallScore);
     	 
     	 if(overallScore >= 80f){
-    		PlayerPrefs.SetInt("level1Stars" ,3 );
+    		PlayerPrefs.SetInt("level2Stars" ,3 );
     		PlayerPrefs.SetInt("hearts" ,3 );
     		
-    		if((PlayerPrefs.GetInt("level")) < 2)
-    			PlayerPrefs.SetInt("level" , 2);
+    		if((PlayerPrefs.GetInt("level")) < 3)
+    			PlayerPrefs.SetInt("level" , 3);
     		Debug.Log("level :" +PlayerPrefs.GetInt("level" , 1));
     	 }
     	 else if(overallScore < 80f && overallScore >= 60f){
-    		PlayerPrefs.SetInt("level1Stars" ,2 );
-    		if((PlayerPrefs.GetInt("level")) < 2)
-    			PlayerPrefs.SetInt("level" , 2);
+    		PlayerPrefs.SetInt("level2Stars" ,2 );
+    		if((PlayerPrefs.GetInt("level")) < 3)
+    			PlayerPrefs.SetInt("level" , 3);
     	 }
     	 
     	else if (overallScore < 60f && overallScore >= 20f)
-    		PlayerPrefs.SetInt("level1Stars" ,1 );
+    		PlayerPrefs.SetInt("level2Stars" ,1 );
     	else
-    		PlayerPrefs.SetInt("level1Stars" ,0 );
+    		PlayerPrefs.SetInt("level2Stars" ,0 );
     	
 
     	
-    	if( PlayerPrefs.GetInt("level1Stars") > PlayerPrefs.GetInt("Maxlevel1Stars" , 0))
-    	 	PlayerPrefs.SetInt("Maxlevel1Stars" , PlayerPrefs.GetInt("level1Stars"));
+    	if( PlayerPrefs.GetInt("level2Stars") > PlayerPrefs.GetInt("Maxlevel2Stars" , 0))
+    	 	PlayerPrefs.SetInt("Maxlevel2Stars" , PlayerPrefs.GetInt("level2Stars"));
     }
 
     
