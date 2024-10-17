@@ -14,7 +14,7 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: NaslNour
   productName: proj
-  defaultCursor: {fileID: 2800000, guid: eebee02c4cff215499f6099c2c4dcfbe, type: 3}
+  defaultCursor: {fileID: 2800000, guid: 7c4b3550ec8442a40811def684e6ae77, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
@@ -274,7 +274,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: eebee02c4cff215499f6099c2c4dcfbe, type: 3}
+      m_Icon: {fileID: 2800000, guid: 7c4b3550ec8442a40811def684e6ae77, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
