@@ -520,7 +520,7 @@ public class LevelBase: MonoBehaviour
     
     IEnumerator GoNextLevel()
     {
-    	yield return new WaitForSeconds(7.5f);
+    	yield return new WaitForSeconds(3.5f);
     	nextlvelcanvas.SetActive(true);
     	videoPlayers[PlayerPrefs.GetInt("level1Stars")].GetComponent<VideoPlayer>().Pause();
     	videoPlayers[PlayerPrefs.GetInt("level1Stars")].SetActive(false);
@@ -610,7 +610,26 @@ public class LevelBase: MonoBehaviour
     	StartGame();
     	
     }
-   void SetLoginSprite()
+
+
+    public void BackHint2()
+    {
+        Hint1.SetActive(true);
+        Hint2.SetActive(false);
+    }
+
+    public void BackHint3()
+    {
+        Hint2.SetActive(true);
+        Hint3.SetActive(false);
+    }
+
+    public void BackHint4()
+    {
+        Hint3.SetActive(true);
+        Hint4.SetActive(false);
+    }
+    void SetLoginSprite()
     {
     	if(PlayerPrefs.GetInt("Sex", 0) == 0 )
     		loginButton.GetComponent<Image>().sprite = man;

@@ -710,6 +710,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -478
       objectReference: {fileID: 0}
+    - target: {fileID: 1371232576052781180, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 583
+      objectReference: {fileID: 0}
     - target: {fileID: 1875075064009767570, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
       propertyPath: ShapeModule.angle
       value: 57.8
@@ -830,6 +834,42 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Level3, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 3721979283302464349, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_Texture
+      value: 
+      objectReference: {fileID: 8400000, guid: 5b083f3486711e3409d654e66fdf3c09, type: 2}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 3aac7a7ccc5dee641855f329c45362f1, type: 3}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_ControlledAudioTrackCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_DirectAudioMutes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_TargetAudioSources.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_DirectAudioVolumes.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721979284060012893, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_EnabledAudioTracks.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3761947509726356752, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -849,6 +889,10 @@ PrefabInstance:
     - target: {fileID: 4026354770853102155, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -306
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125880709851931302, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4306277011529243808, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
       propertyPath: m_Camera
@@ -1174,5 +1218,9 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 467369341}
+    - target: {fileID: 9217788310548014968, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f5935c4194e0c44e8d0f6f2da527e4d, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 851c2f3f02e1c564e95790bc03459a12, type: 3}

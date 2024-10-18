@@ -489,7 +489,7 @@ public class Level3: MonoBehaviour
     
     IEnumerator GoNextLevel()
     {
-    	yield return new WaitForSeconds(7.5f);
+    	yield return new WaitForSeconds(3.5f);
         //nextlvelcanvas.SetActive(true);
         endGamePanel.SetActive(true);
     	videoPlayers[PlayerPrefs.GetInt("level3Stars")].GetComponent<VideoPlayer>().Pause();

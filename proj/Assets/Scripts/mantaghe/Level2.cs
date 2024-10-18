@@ -507,7 +507,7 @@ public class Level2: MonoBehaviour
     
     IEnumerator GoNextLevel()
     {
-    	yield return new WaitForSeconds(7.5f);
+    	yield return new WaitForSeconds(3.5f);
     	nextlvelcanvas.SetActive(true);
     	videoPlayers[PlayerPrefs.GetInt("level2Stars")].GetComponent<VideoPlayer>().Pause();
     	videoPlayers[PlayerPrefs.GetInt("level2Stars")].SetActive(false);
