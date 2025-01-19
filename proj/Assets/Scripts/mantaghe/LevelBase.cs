@@ -9,6 +9,7 @@ using UnityEngine.Video;
 public class LevelBase: MonoBehaviour
 {
 	[Header ("animations")]
+	public ParticleSystem starParticleSystem;
 	[SerializeField] public GameObject[] videoPlayers;
 	
 	[Header ("audios")]
@@ -263,8 +264,9 @@ public class LevelBase: MonoBehaviour
     public void Q1B1()
     {
     	CorrectAnswere(q1b1);
-    	particle1.Play();
-    	targets[0].SetActive(false);
+    	//particle1.Play();
+    	Instantiate(starParticleSystem, transform.position, Quaternion.identity);
+    	//targets[0].SetActive(false);
     	disableButtons(q1b1 , q1b2, q1b3);
     	StartCoroutine("LoadQestion2");
     }
@@ -290,8 +292,9 @@ public class LevelBase: MonoBehaviour
 	public void Q2B1()
 	{
 		CorrectAnswere(q2b1);
-		particle2.Play();
-		targets[1].SetActive(false);
+		//particle2.Play();
+		Instantiate(starParticleSystem, transform.position, Quaternion.identity);
+		//targets[1].SetActive(false);
 		disableButtons(q2b1, q2b2, q2b3);
 		StartCoroutine("LoadQestion3");
 	}
@@ -318,8 +321,9 @@ public class LevelBase: MonoBehaviour
 	public void Q3B1()
 	{
 		CorrectAnswere(q3b1);
-		particle3.Play();
-		targets[2].SetActive(false);
+		//particle3.Play();
+		Instantiate(starParticleSystem, transform.position, Quaternion.identity);
+		//targets[2].SetActive(false);
 		disableButtons(q3b1, q3b2, q3b3);
 		StartCoroutine("LoadQestion4");
 	}
@@ -345,8 +349,9 @@ public class LevelBase: MonoBehaviour
 	public void Q4B1()
 	{
 		CorrectAnswere(q4b1);
-		particle4.Play();
-		targets[3].SetActive(false);
+//		particle4.Play();
+//		targets[3].SetActive(false);
+		Instantiate(starParticleSystem, transform.position, Quaternion.identity);
 		disableButtons(q4b1, q4b2, q4b3);
 		StartCoroutine("Endlevel");
 	}
@@ -400,6 +405,7 @@ public class LevelBase: MonoBehaviour
     {
     	totalCorrectQuestionNum ++;
     	q.GetComponent<Image>().sprite = green;
+    	audioSource[3].Play();
     		
     }
     
