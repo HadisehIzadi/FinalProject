@@ -99,7 +99,7 @@ public class LevelSelection : MonoBehaviour
     	loadingVideo.GetComponent<VideoPlayer>().Play();
     	if(PlayerPrefs.GetInt("level" , 1) <1 )
     		PlayerPrefs.SetInt("level" , 1);
-    	StartCoroutine(LoadScene("level" , 3.5f));
+    	StartCoroutine(LoadScene("preLvl1" , 3.5f));
     }
     
     public void Level2()
@@ -109,7 +109,7 @@ public class LevelSelection : MonoBehaviour
     	//loadingVideo.SetActive(true);
     	loadingVideo.GetComponent<VideoPlayer>().Play();
     	//PlayerPrefs.SetInt("level" , 1);
-    	StartCoroutine(LoadScene("level2" , 3.5f));
+    	StartCoroutine(LoadScene("level" , 3.5f));
     	}
     	
     	else
@@ -132,7 +132,7 @@ public class LevelSelection : MonoBehaviour
     	
     	//PlayerPrefs.SetInt("level" , 1);
     	
-    	StartCoroutine(LoadScene("level3" , 3.5f));
+    	StartCoroutine(LoadScene("level2" , 3.5f));
     	}
     	
     	else
@@ -157,7 +157,7 @@ public class LevelSelection : MonoBehaviour
     	
 
     	
-    	StartCoroutine(LoadScene("level4" , 3.5f));
+    	StartCoroutine(LoadScene("level3" , 3.5f));
     	}
     	
     	else
@@ -180,7 +180,7 @@ public class LevelSelection : MonoBehaviour
     	
 
     	
-    	StartCoroutine(LoadScene("level5" , 3.5f));
+    	StartCoroutine(LoadScene("level4" , 3.5f));
     	}
     	
     	else
@@ -204,7 +204,7 @@ public class LevelSelection : MonoBehaviour
     	
 
     	
-    	StartCoroutine(LoadScene("level6" , 3.5f));
+    	StartCoroutine(LoadScene("level5" , 3.5f));
     	}
     	
     	else
@@ -262,35 +262,39 @@ public class LevelSelection : MonoBehaviour
     
     void SetStars()
     {
-    	int activeStars1 = PlayerPrefs.GetInt("Maxlevel1Stars" , 0);
+    	int activeStars1 = PlayerPrefs.GetInt("MaxPreLevelStars" , 0);
     	for(int i = 0 ; i < activeStars1 ;i++)
     		level1Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
     	
-    	int activeStars2 = PlayerPrefs.GetInt("Maxlevel2Stars" , 0);
+    	int activeStars2 = PlayerPrefs.GetInt("Maxlevel1Stars" , 0);
     	for(int i = 0 ; i < activeStars2;i++)
     		level2Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
-    	int activeStars3 = PlayerPrefs.GetInt("Maxlevel3Stars" , 0);
+    	int activeStars3 = PlayerPrefs.GetInt("Maxlevel2Stars" , 0);
     	for(int i = 0 ; i < activeStars3;i++)
     		level3Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
-    	int activeStars4 = PlayerPrefs.GetInt("Maxlevel4Stars" , 0);
+    	int activeStars4 = PlayerPrefs.GetInt("Maxlevel3Stars" , 0);
     	for(int i = 0 ; i < activeStars4;i++)
     		level4Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
-    	int activeStars5 = PlayerPrefs.GetInt("Maxlevel5Stars" , 0);
+    	int activeStars5 = PlayerPrefs.GetInt("Maxlevel4Stars" , 0);
     	for(int i = 0 ; i < activeStars5;i++)
     		level5Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
-    	int activeStars6 = PlayerPrefs.GetInt("Maxlevel6Stars" , 0);
+    	int activeStars6 = PlayerPrefs.GetInt("Maxlevel5Stars" , 0);
     	for(int i = 0 ; i < activeStars6;i++)
     		level6Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     	
     	
-    	int activeStars7 = PlayerPrefs.GetInt("Maxlevel7Stars" , 0);
+    	int activeStars7 = PlayerPrefs.GetInt("Maxlevel6Stars" , 0);
     	for(int i = 0 ; i < activeStars7;i++)
     		level7Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
+    	
+//    	int activeStars8 = PlayerPrefs.GetInt("Maxlevel7Stars" , 0);
+//    	for(int i = 0 ; i < activeStars8;i++)
+//    		level8Stars.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = yellowStar;
     }
     
     
@@ -312,7 +316,7 @@ public class LevelSelection : MonoBehaviour
     void SetLevels() 
     {
     
-    	for(int i = 1 ; i <PlayerPrefs.GetInt("level" , 1);i++)
+    	for(int i = 1 ; i <= PlayerPrefs.GetInt("level" , 1);i++)
     	{
             // baraye roidad mantaghe 
             if (i != 3)

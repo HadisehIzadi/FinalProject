@@ -18,10 +18,10 @@ public class PreLvl1 : MonoBehaviour
 	[SerializeField] GameObject mainCanvas;
 	[SerializeField] GameObject nextlvelcanvas;
 	[SerializeField] GameObject ExitPanel;
-	[SerializeField] GameObject Hint1;
-	[SerializeField] GameObject Hint2;
-	[SerializeField] GameObject Hint3;
-	[SerializeField] GameObject Hint4;
+//	[SerializeField] GameObject Hint1;
+//	[SerializeField] GameObject Hint2;
+//	[SerializeField] GameObject Hint3;
+//	[SerializeField] GameObject Hint4;
 	[SerializeField] Sprite man;
 	[SerializeField] Sprite woman;
 	[SerializeField] GameObject loginButton;
@@ -220,7 +220,8 @@ public class PreLvl1 : MonoBehaviour
 
     void Start()
     {
-    	ShowHint1();
+    	//ShowHint1();
+    	StartGame();
     }
     
     void StartGame()
@@ -815,31 +816,31 @@ public class PreLvl1 : MonoBehaviour
     }
     
     
-    void ShowHint1()
-    {
-    	Hint1.SetActive(true);
-    }
-    public void ContineHint1()
-    {
-    	Hint1.SetActive(false);
-    	Hint2.SetActive(true);
-    }
-    public void ContineHint2()
-    {
-    	Hint2.SetActive(false);
-    	Hint3.SetActive(true);
-    }
-    public void ContineHint3()
-    {
-    	Hint3.SetActive(false);
-    	Hint4.SetActive(true);
-    }
-   public void ContineHint4()
-    {
-    	Hint4.SetActive(false);
-    	StartGame();
-    	
-    }
+//    void ShowHint1()
+//    {
+//    	Hint1.SetActive(true);
+//    }
+//    public void ContineHint1()
+//    {
+//    	Hint1.SetActive(false);
+//    	Hint2.SetActive(true);
+//    }
+//    public void ContineHint2()
+//    {
+//    	Hint2.SetActive(false);
+//    	Hint3.SetActive(true);
+//    }
+//    public void ContineHint3()
+//    {
+//    	Hint3.SetActive(false);
+//    	Hint4.SetActive(true);
+//    }
+//   public void ContineHint4()
+//    {
+//    	Hint4.SetActive(false);
+//    	StartGame();
+//    	
+//    }
    void SetLoginSprite()
     {
     	if(PlayerPrefs.GetInt("Sex", 0) == 0 )

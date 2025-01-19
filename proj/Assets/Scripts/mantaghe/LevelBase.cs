@@ -59,7 +59,7 @@ public class LevelBase: MonoBehaviour
 	[SerializeField] Button q1b1;
 	[SerializeField] Sprite red;
 	[SerializeField] Sprite green;
-	[SerializeField] ParticleSystem particle1;
+
 
 	
 	[Header("qestion 1 / button 2")]
@@ -75,7 +75,7 @@ public class LevelBase: MonoBehaviour
     //**************************************************	
 	[Header("qestion 2 / button 1")]
 	[SerializeField] Button q2b1;
-	[SerializeField] ParticleSystem particle2;
+
 
 	
 	[Header("qestion 2 / button 2")]
@@ -93,7 +93,7 @@ public class LevelBase: MonoBehaviour
     //**************************************************	
 	[Header("qestion 3 / button 1")]
 	[SerializeField] Button q3b1;
-	[SerializeField] ParticleSystem particle3;
+
 
 	
 	[Header("qestion 3 / button 2")]
@@ -110,7 +110,7 @@ public class LevelBase: MonoBehaviour
     //**************************************************	
 	[Header("qestion 4 / button 1")]
 	[SerializeField] Button q4b1;
-	[SerializeField] ParticleSystem particle4;
+
 
 	
 	[Header("qestion 4 / button 2")]
@@ -125,7 +125,7 @@ public class LevelBase: MonoBehaviour
     //**************************************************	
 	[Header("qestion 5 / button 1")]
 	[SerializeField] Button q5b1;
-	[SerializeField] ParticleSystem particle5;
+
 
 	
 	[Header("qestion 5 / button 2")]
@@ -141,7 +141,7 @@ public class LevelBase: MonoBehaviour
     //**************************************************	
 	[Header("qestion 6 / button 1")]
 	[SerializeField] Button q6b1;
-	[SerializeField] ParticleSystem particle6;
+
 
 	
 	[Header("qestion 6 / button 2")]
@@ -177,7 +177,7 @@ public class LevelBase: MonoBehaviour
 
 
     	
-    //	StartGame();
+
 
     	
     }
@@ -186,7 +186,7 @@ public class LevelBase: MonoBehaviour
     	SetHerats();
     	SetLoginSprite();
     	isStarted = true;
-    //	videoPlayers[4].SetActive(false);
+
     	q1.SetActive(true);
     	q2.SetActive(false);
     	q3.SetActive(false);
@@ -198,9 +198,7 @@ public class LevelBase: MonoBehaviour
     	level1hearts = PlayerPrefs.GetInt("hearts" ,3 );
     	settingPanel.SetActive(false);
     	ExitPanel.SetActive(false);
-    	
-    	//roundTime = 40f;
-    	//roundTime += 5.5f;
+ 
     	benchTime = roundTime;
     	studentTime = 0f;
     	totalCorrectQuestionNum = 0;
